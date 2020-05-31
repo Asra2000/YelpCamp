@@ -22,6 +22,7 @@ var Comment = require('./models/comment'),
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 app.use(flash());
+require('dotenv').config();
 // seedDB();//seed the database
 
 app.use(bodyParser.urlencoded({extended: true}));

@@ -5,13 +5,13 @@ var User = require('../models/user');
 
 /////////////////////////////////////////////////////
 // pertaining to payment
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+// const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-const paymentIntent = await stripe.paymentIntents.create({
-    amount : 1099,//actual price * 100
-    currency: 'usd',
-    metadata: {integration_check: 'accept_a_payment'},
-});
+// const paymentIntent = await stripe.paymentIntents.create({
+//     amount : 1099,//actual price * 100
+//     currency: 'usd',
+//     metadata: {integration_check: 'accept_a_payment'},
+// });
 
 router.get("/", (req, res)=>{
     res.render("landing");

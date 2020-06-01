@@ -6,9 +6,10 @@ var express             = require("express"),
          methodOverride = require('method-override'),
       LocalStrategy  = require('passport-local'),
         User            = require('./models/user'),
+        dotenv          = require('dotenv');
         flash           = require('connect-flash');
 
-
+dotenv.config();
 //requiring routes
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");

@@ -6,17 +6,16 @@ var express             = require("express"),
          methodOverride = require('method-override'),
       LocalStrategy  = require('passport-local'),
         User            = require('./models/user'),
-        dotenv          = require('dotenv');
         flash           = require('connect-flash');
 
-dotenv.config();
+
 //requiring routes
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 //////////////////////////////////////////////////////////////////////////////
 // mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser : true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://Asra:asra@2000@cluster0-cqrao.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser : true, useUnifiedTopology: true });
 var Campground = require('./models/campground');
 var Comment = require('./models/comment'),
  seedDB = require('./seeds');

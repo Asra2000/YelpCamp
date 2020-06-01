@@ -24,7 +24,7 @@
     "stripe": "^8.55.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
+    // "dotenv": "^8.2.0",
     "nodemon": "^2.0.2"
   }
 }
